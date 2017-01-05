@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TrainSpotter</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h1>Train Times</h1>
+		<h2>Don't Be Late</h2>
+	</div>
+
+	<div id="train-schedule">
+		<div class="row">
+			<div class="col-md-3">
+				<h3>Train Name</h3>
+			</div>
+			<div class="col-md-3">
+				<h3>Destination</h3>
+			</div>
+			<div class="col-md-2">
+				<h3>Frequency (Min)</h3>
+			</div>
+			<div class="col-md-2">
+				<h3>Next Arrival</h3>
+			</div>
+			<div class="col-md-2">
+				<h3>Minutes Away</h3>
+			</div>
+		</div>
+	</div>
+
+	<div id="form-container">
+		<form id="train-adder-form">
+			<label for="train-adder-form">Train Name</label>
+			<br>
+			<input type="text" id="train-name">
+			<br>
+
+			<label for="train-adder-form">Destination</label>
+			<br>
+			<input type="text" id="train-destination">
+			<br>			
+
+			<label for="train-adder-form">First Train Time (HH:MM)</label>
+			<br>
+			<input type="text" id="first-train-time">
+			<br>
+
+			<label for="train-adder-form">Train Frequency (Min)</label>
+			<br>
+			<input type="text" id="train-frequency">
+			<br>
+
+			<div id="buttons-container">
+				<button type="submit" form="train-adder-form" value="Submit" class="hvr-back-pulse">Submit</button>
+				<button type="reset" value="Reset" id="clear" class="hvr-back-pulse">Clear</button>
+			</div>
+		</form>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</body>
+</html>
